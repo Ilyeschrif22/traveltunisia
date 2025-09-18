@@ -26,6 +26,7 @@
     <meta name="twitter:title" content="Discover the Magical Beauty of Tunisia | Complete Travel & Tourism Guide 2025">
     <meta name="twitter:description" content="Discover the magical beauty of Tunisia: Sahara dunes, Mediterranean beaches, ancient Carthage ruins, vibrant souks, and authentic Berber culture.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=630&fit=crop">
+    <meta name="google-site-verification" content="googleb07214affd3cfbc1.html">
     <link rel="canonical" href="https://traveltunisia.netlify.app/">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇹🇳</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇹🇳</text></svg>">
@@ -44,16 +45,20 @@
     }
 
     :root {
-        --primary-color: #D2691E;
-        --secondary-color: #008B8B;
+        --primary-color: #E30613;
+        --secondary-color: #FFFFFF;
         --accent-color: #FFD700;
-        --text-dark: #2C3E50;
-        --text-light: #ECF0F1;
-        --background-light: #FDFEFE;
-        --gradient-desert: linear-gradient(135deg, #D2691E 0%, #FF8C00 50%, #FFD700 100%);
-        --gradient-sea: linear-gradient(135deg, #006994 0%, #008B8B 50%, #20B2AA 100%);
-        --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1);
-        --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+        --text-dark: #1a1a1a;
+        --text-light: #FFFFFF;
+        --background-light: #FAFAFA;
+        --gradient-tunisia: linear-gradient(135deg, #E30613 0%, #C41E3A 50%, #8B0000 100%);
+        --gradient-hero: linear-gradient(135deg, #E30613 0%, #FF6B6B 50%, #FFD700 100%);
+        --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+        --shadow-soft: 0 8px 32px rgba(227, 6, 19, 0.1);
+        --shadow-hover: 0 16px 48px rgba(227, 6, 19, 0.2);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --border-radius: 16px;
+        --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     body {
@@ -61,6 +66,9 @@
         line-height: 1.6;
         color: var(--text-dark);
         overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
     }
 
     .container {
@@ -92,10 +100,15 @@
         font-family: 'Playfair Display', serif;
         font-size: 2rem;
         font-weight: 700;
-        background: var(--gradient-desert);
+        background: var(--gradient-tunisia);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        transition: var(--transition);
+    }
+
+    .logo:hover {
+        transform: scale(1.05);
     }
 
     .nav-links {
@@ -135,8 +148,8 @@
     /* Hero Section */
     .hero {
         height: 100vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-            url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop') center/cover;
+        background: linear-gradient(135deg, rgba(227, 6, 19, 0.8) 0%, rgba(196, 30, 58, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%),
+            url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop&q=80') center/cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -144,6 +157,7 @@
         color: white;
         position: relative;
         overflow: hidden;
+        background-attachment: fixed;
     }
 
     .hero::before {
@@ -182,23 +196,25 @@
 
     .cta-button {
         display: inline-block;
-        background: var(--gradient-desert);
+        background: var(--gradient-tunisia);
         color: white;
-        padding: 15px 40px;
+        padding: 18px 45px;
         text-decoration: none;
         border-radius: 50px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
-        transition: all 0.3s ease;
+        transition: var(--transition);
         box-shadow: var(--shadow-soft);
         position: relative;
         overflow: hidden;
+        border: 2px solid transparent;
     }
 
     .cta-button:hover {
-        transform: translateY(-3px);
+        transform: translateY(-5px) scale(1.05);
         box-shadow: var(--shadow-hover);
+        border-color: var(--accent-color);
     }
 
     .cta-button::before {
@@ -252,18 +268,20 @@
     }
 
     .destination-card {
-        background: white;
-        border-radius: 20px;
+        background: var(--gradient-card);
+        border-radius: var(--border-radius);
         overflow: hidden;
-        box-shadow: var(--shadow-soft);
-        transition: all 0.3s ease;
+        box-shadow: var(--shadow-card);
+        transition: var(--transition);
         position: relative;
         height: 400px;
+        border: 1px solid rgba(227, 6, 19, 0.1);
     }
 
     .destination-card:hover {
-        transform: translateY(-10px);
+        transform: translateY(-15px) scale(1.02);
         box-shadow: var(--shadow-hover);
+        border-color: var(--primary-color);
     }
 
     .destination-card::before {
@@ -438,8 +456,10 @@
     /* Contact Section */
     .contact {
         padding: 100px 0;
-        background: var(--gradient-sea);
+        background: var(--gradient-tunisia);
         color: white;
+        position: relative;
+        overflow: hidden;
     }
 
     .contact-container {
@@ -447,6 +467,8 @@
         grid-template-columns: 1fr 1fr;
         gap: 60px;
         align-items: start;
+        position: relative;
+        z-index: 2;
     }
 
     .contact-info h2 {
@@ -462,10 +484,12 @@
     }
 
     .contact-form {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.15);
         padding: 40px;
-        border-radius: 20px;
-        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: var(--shadow-soft);
     }
 
     .form-group {
@@ -578,12 +602,43 @@
     @keyframes fadeInUp {
         from {
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(60px) scale(0.95);
         }
 
         to {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-60px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(60px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
         }
     }
 
@@ -639,13 +694,26 @@
     /* Scroll Animations */
     .animate-on-scroll {
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
+        transform: translateY(40px) scale(0.95);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .animate-on-scroll.animated {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
+    }
+
+    .animate-on-scroll.slide-left {
+        transform: translateX(-40px) scale(0.95);
+    }
+
+    .animate-on-scroll.slide-right {
+        transform: translateX(40px) scale(0.95);
+    }
+
+    .animate-on-scroll.slide-left.animated,
+    .animate-on-scroll.slide-right.animated {
+        transform: translateX(0) scale(1);
     }
 
     /* Loading Animation */
@@ -723,8 +791,39 @@
     }
 
     .share-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    /* Modern Glass Effect */
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--gradient-tunisia);
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color);
     }
 </style>
 </head>
@@ -768,7 +867,7 @@
             <h2 class="section-title animate-on-scroll">Must-Visit Iconic Destinations</h2>
             <div class="destinations-grid">
                 <div class="destination-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a12?w=600&h=400&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a12?w=600&h=400&fit=crop&q=80"
                         alt="Sidi Bou Said blue and white architecture">
                     <div class="destination-info">
                         <h3>Sidi Bou Said</h3>
@@ -778,7 +877,7 @@
                     </div>
                 </div>
                 <div class="destination-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&q=80"
                         alt="Sahara Desert Tunisia">
                     <div class="destination-info">
                         <h3>Sahara Desert</h3>
@@ -788,7 +887,7 @@
                     </div>
                 </div>
                 <div class="destination-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1591123506875-1de8ae2877e1?w=600&h=400&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1591123506875-1de8ae2877e1?w=600&h=400&fit=crop&q=80"
                         alt="Ancient Carthage ruins">
                     <div class="destination-info">
                         <h3>Ancient Carthage</h3>
@@ -798,7 +897,7 @@
                     </div>
                 </div>
                 <div class="destination-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1580735816602-6750894bc6cd?w=600&h=400&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1580735816602-6750894bc6cd?w=600&h=400&fit=crop&q=80"
                         alt="Tunis Medina traditional market">
                     <div class="destination-info">
                         <h3>Tunis Medina</h3>
@@ -841,42 +940,42 @@
             <h2 class="section-title animate-on-scroll">Stunning Visual Journey</h2>
             <div class="gallery-grid">
                 <div class="gallery-item animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1585227542451-a1c39cf589ef?w=400&h=300&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1585227542451-a1c39cf589ef?w=400&h=300&fit=crop&q=80"
                         alt="Tunisia beach">
                     <div class="gallery-overlay">
                         <h4>Pristine Beaches</h4>
                     </div>
                 </div>
                 <div class="gallery-item animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1608031996299-2d3c7d6b3e7c?w=400&h=300&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1608031996299-2d3c7d6b3e7c?w=400&h=300&fit=crop&q=80"
                         alt="Tunisia architecture">
                     <div class="gallery-overlay">
                         <h4>Islamic Architecture</h4>
                     </div>
                 </div>
                 <div class="gallery-item animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1584626128764-3e39b3d04187?w=400&h=300&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1584626128764-3e39b3d04187?w=400&h=300&fit=crop&q=80"
                         alt="Tunisia cuisine">
                     <div class="gallery-overlay">
                         <h4>Delicious Cuisine</h4>
                     </div>
                 </div>
                 <div class="gallery-item animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&q=80"
                         alt="Tunisia desert sunset">
                     <div class="gallery-overlay">
                         <h4>Desert Sunsets</h4>
                     </div>
                 </div>
                 <div class="gallery-item animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1591123506875-1de8ae2877e1?w=400&h=300&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1591123506875-1de8ae2877e1?w=400&h=300&fit=crop&q=80"
                         alt="Tunisia historical sites">
                     <div class="gallery-overlay">
                         <h4>Ancient History</h4>
                     </div>
                 </div>
                 <div class="gallery-item animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1580735816602-6750894bc6cd?w=400&h=300&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1580735816602-6750894bc6cd?w=400&h=300&fit=crop&q=80"
                         alt="Tunisia traditional crafts">
                     <div class="gallery-overlay">
                         <h4>Traditional Crafts</h4>
@@ -979,28 +1078,20 @@
             });
         });
 
-        // Header Background on Scroll
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.15)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
-            }
-        });
 
-        // Scroll Animation Observer
+        // Enhanced Scroll Animation Observer
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.15,
+            rootMargin: '0px 0px -30px 0px'
         };
 
         const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
+                    // Add staggered animation delay
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, index * 100);
                 }
             });
         }, observerOptions);
@@ -1048,27 +1139,18 @@
             });
         });
 
-        // Destination Cards Hover Effect
+        // Enhanced Destination Cards Hover Effect
         document.querySelectorAll('.destination-card').forEach(card => {
             card.addEventListener('mouseenter', function () {
-                this.style.transform = 'translateY(-15px) rotateY(5deg)';
+                this.style.transform = 'translateY(-15px) scale(1.02) rotateY(2deg)';
+                this.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
             });
 
             card.addEventListener('mouseleave', function () {
-                this.style.transform = 'translateY(0) rotateY(0)';
+                this.style.transform = 'translateY(0) scale(1) rotateY(0)';
             });
         });
 
-        // Parallax Effect for Hero Section
-        window.addEventListener('scroll', function () {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            const rate = scrolled * -0.5;
-
-            if (hero) {
-                hero.style.transform = `translateY(${rate}px)`;
-            }
-        });
 
         // Dynamic Navigation Active State
         const sections = document.querySelectorAll('section[id]');
@@ -1144,23 +1226,63 @@
         `;
         document.head.appendChild(style);
 
-        // Performance optimization - Lazy load images
+        // Performance optimization - Lazy load images with better error handling
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
                     }
                 });
+            }, {
+                rootMargin: '50px'
             });
 
             document.querySelectorAll('img[data-src]').forEach(img => {
                 imageObserver.observe(img);
             });
         }
+
+        // Throttled scroll handler for better performance
+        let ticking = false;
+        function updateScrollEffects() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const header = document.querySelector('header');
+            
+            // Parallax effect
+            if (hero) {
+                const rate = scrolled * -0.3;
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+            
+            // Header background
+            if (header) {
+                if (scrolled > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 10px 30px rgba(227, 6, 19, 0.15)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 10px 30px rgba(227, 6, 19, 0.1)';
+                }
+            }
+            
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick, { passive: true });
 
         // Add floating action button for quick contact
         const floatingBtn = document.createElement('div');
@@ -1171,7 +1293,7 @@
             right: 30px;
             width: 60px;
             height: 60px;
-            background: var(--gradient-desert);
+            background: var(--gradient-tunisia);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1179,9 +1301,10 @@
             font-size: 24px;
             cursor: pointer;
             box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
+            transition: var(--transition);
             z-index: 1000;
-            animation: float 3s ease-in-out infinite;
+            animation: pulse 2s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
         `;
 
         floatingBtn.addEventListener('click', () => {
