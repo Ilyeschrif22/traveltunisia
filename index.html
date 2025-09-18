@@ -4,17 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Tunisia | Travel & Tourism Guide</title>
+    <title>Discover the Magical Beauty of Tunisia | Complete Travel & Tourism Guide 2025</title>
     <meta name="description"
-        content="Experience Tunisia: Sahara dunes, Mediterranean beaches, ancient ruins & vibrant souks. Plan your perfect adventure with our expert travel guide.">
+        content="Discover the magical beauty of Tunisia: Sahara dunes, Mediterranean beaches, ancient Carthage ruins, vibrant souks, and authentic Berber culture. Complete travel guide with 800+ words of expert insights for your perfect Tunisia adventure.">
     <meta name="keywords"
         content="Tunisia travel, visit Tunisia, Tunisia tourism, Sahara desert tours, Tunisia beaches, Tunis medina, Carthage ruins, Sidi Bou Said, Tunisia culture, North Africa travel">
     <meta name="author" content="Tunisia Tourism Board">
-    <meta property="og:title" content="Discover Tunisia | Travel & Tourism Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta property="og:title" content="Discover the Magical Beauty of Tunisia | Complete Travel & Tourism Guide 2025">
     <meta property="og:type" content="website">
     <meta property="og:image"
         content="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=630&fit=crop">
+    <meta property="og:description" content="Discover the magical beauty of Tunisia: Sahara dunes, Mediterranean beaches, ancient Carthage ruins, vibrant souks, and authentic Berber culture. Complete travel guide with 800+ words of expert insights for your perfect Tunisia adventure.">
+    <meta property="og:url" content="https://traveltunisia.netlify.app/">
+    <meta property="og:site_name" content="Discover Tunisia">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discover the Magical Beauty of Tunisia | Complete Travel & Tourism Guide 2025">
+    <meta name="twitter:description" content="Discover the magical beauty of Tunisia: Sahara dunes, Mediterranean beaches, ancient Carthage ruins, vibrant souks, and authentic Berber culture.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=630&fit=crop">
     <link rel="canonical" href="https://traveltunisia.netlify.app/">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇹🇳</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇹🇳</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -672,6 +686,46 @@
             transform: rotate(360deg);
         }
     }
+
+    /* Social Share Buttons */
+    .social-share-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .share-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+
+    .share-btn.facebook {
+        background: #3b5998;
+    }
+
+    .share-btn.twitter {
+        background: #1da1f2;
+    }
+
+    .share-btn.linkedin {
+        background: #0077b5;
+    }
+
+    .share-btn.whatsapp {
+        background: #25d366;
+    }
+
+    .share-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 </style>
 </head>
 
@@ -694,16 +748,24 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Discover Tunisia</h1>
+            <h1>Discover the Magical Beauty of Tunisia</h1>
             <p>Where ancient history meets Mediterranean beauty, and the Sahara whispers tales of adventure. Experience
-                the crossroads of civilizations in this North African gem.</p>
+                the crossroads of civilizations in this North African gem. From the bustling markets of Tunis to the
+                serene beaches of Hammamet, Tunisia offers an unparalleled blend of cultural richness, historical
+                significance, and natural wonders that captivate travelers from around the world.</p>
             <a href="#destinations" class="cta-button">Start Your Journey</a>
+            <div class="social-share-buttons" style="margin-top: 30px;">
+                <button onclick="shareOnFacebook()" class="share-btn facebook">Share on Facebook</button>
+                <button onclick="shareOnTwitter()" class="share-btn twitter">Share on Twitter</button>
+                <button onclick="shareOnLinkedIn()" class="share-btn linkedin">Share on LinkedIn</button>
+                <button onclick="shareOnWhatsApp()" class="share-btn whatsapp">Share on WhatsApp</button>
+            </div>
         </div>
     </section>
 
     <section id="destinations" class="destinations">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Iconic Destinations</h2>
+            <h2 class="section-title animate-on-scroll">Must-Visit Iconic Destinations</h2>
             <div class="destinations-grid">
                 <div class="destination-card animate-on-scroll">
                     <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a12?w=600&h=400&fit=crop"
@@ -711,7 +773,8 @@
                     <div class="destination-info">
                         <h3>Sidi Bou Said</h3>
                         <p>Enchanting blue and white clifftop village overlooking the Mediterranean, perfect for
-                            romantic strolls and artistic inspiration.</p>
+                            romantic strolls and artistic inspiration. This UNESCO World Heritage site offers breathtaking
+                            views and authentic Tunisian architecture dating back to the 18th century.</p>
                     </div>
                 </div>
                 <div class="destination-card animate-on-scroll">
@@ -720,7 +783,8 @@
                     <div class="destination-info">
                         <h3>Sahara Desert</h3>
                         <p>Experience the magic of endless golden dunes, camel treks, and star-filled nights in
-                            traditional Berber camps.</p>
+                            traditional Berber camps. The Sahara Desert covers over 30% of Tunisia and offers some of the
+                            most spectacular sunsets and stargazing opportunities in North Africa.</p>
                     </div>
                 </div>
                 <div class="destination-card animate-on-scroll">
@@ -729,7 +793,8 @@
                     <div class="destination-info">
                         <h3>Ancient Carthage</h3>
                         <p>Walk through 3,000 years of history at the legendary ruins where Hannibal once planned his
-                            conquests.</p>
+                            conquests. This ancient Phoenician city-state was one of the most powerful civilizations in the
+                            Mediterranean and offers incredible archaeological insights into ancient trade and warfare.</p>
                     </div>
                 </div>
                 <div class="destination-card animate-on-scroll">
@@ -738,7 +803,8 @@
                     <div class="destination-info">
                         <h3>Tunis Medina</h3>
                         <p>Lose yourself in the UNESCO World Heritage maze of souks, mosques, and traditional
-                            architecture dating back centuries.</p>
+                            architecture dating back centuries. The Medina of Tunis is one of the best-preserved Islamic
+                            cities in the world, featuring over 700 monuments and a vibrant marketplace culture.</p>
                     </div>
                 </div>
             </div>
@@ -749,7 +815,7 @@
         <div class="container">
             <div class="experiences-container">
                 <div class="experience-content animate-on-scroll">
-                    <h2>Unforgettable Experiences</h2>
+                    <h2>Unforgettable Cultural Experiences</h2>
                     <ul class="experience-list">
                         <li>Desert Safari & Camel Trekking Adventures</li>
                         <li>Traditional Hammam Spa Treatments</li>
@@ -772,7 +838,7 @@
 
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Visual Journey</h2>
+            <h2 class="section-title animate-on-scroll">Stunning Visual Journey</h2>
             <div class="gallery-grid">
                 <div class="gallery-item animate-on-scroll">
                     <img src="https://images.unsplash.com/photo-1585227542451-a1c39cf589ef?w=400&h=300&fit=crop"
@@ -824,12 +890,17 @@
         <div class="container">
             <div class="contact-container">
                 <div class="contact-info animate-on-scroll">
-                    <h2>Plan Your Perfect Tunisia Adventure</h2>
+                    <h2>Plan Your Perfect Tunisia Adventure Today</h2>
                     <p>Ready to explore the magic of Tunisia? Our travel experts are here to help you create
                         unforgettable memories in this extraordinary destination. From desert expeditions to coastal
                         retreats, we'll craft the perfect itinerary for you.</p>
+                    <p>Tunisia's strategic location at the crossroads of Africa, Europe, and the Middle East has
+                        created a unique cultural tapestry that spans millennia. The country boasts eight UNESCO World
+                        Heritage sites, including the ancient city of Carthage, the Medina of Tunis, and the Amphitheatre
+                        of El Jem, which rivals the Colosseum in Rome.</p>
                     <p>Contact us today and let us help you discover why Tunisia is one of North Africa's most
-                        captivating destinations.</p>
+                        captivating destinations. Whether you're interested in archaeological wonders, beach relaxation,
+                        or authentic cultural immersion, Tunisia offers something extraordinary for every type of traveler.</p>
                 </div>
                 <form class="contact-form animate-on-scroll">
                     <div class="form-group">
@@ -857,7 +928,9 @@
                 <div class="footer-section">
                     <h3>Discover Tunisia</h3>
                     <p>Your gateway to experiencing the authentic beauty, culture, and adventure that Tunisia offers to
-                        travelers from around the world.</p>
+                        travelers from around the world. With over 1,300 kilometers of coastline, diverse landscapes
+                        from mountains to desert, and a rich cultural heritage spanning Phoenician, Roman, Arab, and
+                        French influences, Tunisia is truly a destination like no other.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -868,17 +941,17 @@
                 </div>
                 <div class="footer-section">
                     <h3>Popular Experiences</h3>
-                    <p><a href="#">Sahara Desert Tours</a></p>
-                    <p><a href="#">Cultural Heritage Sites</a></p>
-                    <p><a href="#">Mediterranean Beaches</a></p>
-                    <p><a href="#">Traditional Cuisine</a></p>
+                    <p><a href="https://www.tunisia-tourism.org/en/sahara-desert-tours" target="_blank" rel="noopener">Sahara Desert Tours</a></p>
+                    <p><a href="https://whc.unesco.org/en/statesparties/tn" target="_blank" rel="noopener">Cultural Heritage Sites</a></p>
+                    <p><a href="https://www.tunisia-tourism.org/en/beaches" target="_blank" rel="noopener">Mediterranean Beaches</a></p>
+                    <p><a href="https://www.tunisia-tourism.org/en/cuisine" target="_blank" rel="noopener">Traditional Cuisine</a></p>
                 </div>
             </div>
             <div class="social-links">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="Twitter">🐦</a>
-                <a href="#" aria-label="YouTube">📺</a>
+                <a href="https://www.facebook.com/tunisiatourism" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                <a href="https://www.instagram.com/tunisia_tourism" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                <a href="https://twitter.com/tunisiatourism" target="_blank" rel="noopener" aria-label="Twitter">🐦</a>
+                <a href="https://www.youtube.com/tunisiatourism" target="_blank" rel="noopener" aria-label="YouTube">📺</a>
             </div>
             <p>&copy; 2025 Discover Tunisia. Experience the magic of North Africa.</p>
         </div>
@@ -1145,6 +1218,44 @@
             const scrolled = (winScroll / height) * 100;
             progressBar.style.width = scrolled + '%';
         });
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${title}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://wa.me/?text=${title}%20${url}`, '_blank');
+        }
+
+        (function() {
+            const hostname = window.location.hostname;
+            const protocol = window.location.protocol;
+            const pathname = window.location.pathname;
+            const search = window.location.search;
+            const hash = window.location.hash;
+            
+            if (hostname.startsWith('www.')) {
+                const newHostname = hostname.replace('www.', '');
+                const newUrl = protocol + '//' + newHostname + pathname + search + hash;
+                window.location.replace(newUrl);
+            }
+        })();
     </script>
 </body>
 
