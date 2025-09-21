@@ -572,16 +572,36 @@
         }
 
         (function() {
+            // Enforce non-www canonical host and HTTPS when possible
             const hostname = window.location.hostname;
             const protocol = window.location.protocol;
             const pathname = window.location.pathname;
             const search = window.location.search;
             const hash = window.location.hash;
-            
+
+            let newHostname = hostname;
             if (hostname.startsWith('www.')) {
-                const newHostname = hostname.replace('www.', '');
-                const newUrl = protocol + '//' + newHostname + pathname + search + hash;
-                window.location.replace(newUrl);
+                newHostname = hostname.replace('www.', '');
+            }
+
+            // Prefer HTTPS if not already using it
+            const preferHttps = 'https:';
+            let newProtocol = protocol;
+            if (protocol !== preferHttps) {
+                newProtocol = preferHttps;
+            }
+
+            const newUrl = newProtocol + '//' + newHostname + pathname + search + hash;
+
+            // Only redirect when there's a change to avoid reload loops
+            if (newUrl !== window.location.href) {
+                try {
+                    // Use replace so the previous (non-canonical) URL is not saved in history
+                    window.location.replace(newUrl);
+                } catch (e) {
+                    // Fallback: set location
+                    window.location.href = newUrl;
+                }
             }
         })();
     </script>
