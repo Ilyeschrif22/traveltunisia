@@ -83,10 +83,10 @@
         top: 0;
         width: 100%;
         background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(15px);
         z-index: 1000;
-        padding: 15px 0;
-        box-shadow: var(--shadow-soft);
+        padding: 10px 0;
+        box-shadow: 0 4px 20px rgba(227, 6, 19, 0.1);
         transition: all 0.3s ease;
     }
 
@@ -94,61 +94,128 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
     .logo {
-        font-family: 'Playfair Display', serif;
-        font-size: 2rem;
-        font-weight: 700;
-        background: var(--gradient-tunisia);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
         transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 8px;
+    }
+
+    .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: var(--transition);
+        border-radius: 50%;
     }
 
     .logo:hover {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: var(--shadow-hover);
+    }
+
+    .logo:hover img {
         transform: scale(1.05);
     }
 
     .nav-links {
         display: flex;
         list-style: none;
-        gap: 30px;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
     }
 
-    .nav-links a {
+    .nav-links li {
+        position: relative;
+    }
+
+    .nav-links li:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        padding: 10px 0;
+        border: 1px solid rgba(227, 6, 19, 0.1);
+    }
+
+    .dropdown a {
+        display: block;
+        padding: 12px 20px;
+        color: var(--text-dark);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(227, 6, 19, 0.05);
+    }
+
+    .dropdown a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown a:hover {
+        background: rgba(227, 6, 19, 0.05);
+        color: var(--primary-color);
+        padding-left: 25px;
+    }
+
+    .nav-links > li > a {
         text-decoration: none;
         color: var(--text-dark);
         font-weight: 500;
         transition: all 0.3s ease;
         position: relative;
+        padding: 8px 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
-    .nav-links a:hover {
+    .nav-links > li > a::after {
+        content: '▼';
+        font-size: 0.7rem;
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links > li:hover > a::after {
+        transform: rotate(180deg);
+    }
+
+    .nav-links > li > a:hover {
         color: var(--primary-color);
+        background: rgba(227, 6, 19, 0.1);
         transform: translateY(-2px);
-    }
-
-    .nav-links a::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--gradient-desert);
-        transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::after {
-        width: 100%;
     }
 
     /* Hero Section */
     .hero {
         height: 100vh;
-        background: linear-gradient(135deg, rgba(227, 6, 19, 0.8) 0%, rgba(196, 30, 58, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%),
+        background: linear-gradient(135deg, rgba(227, 6, 19, 0.85) 0%, rgba(196, 30, 58, 0.7) 50%, rgba(0, 0, 0, 0.5) 100%),
             url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop&q=80') center/cover;
         display: flex;
         align-items: center;
@@ -158,6 +225,8 @@
         position: relative;
         overflow: hidden;
         background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
     }
 
     .hero::before {
@@ -172,26 +241,33 @@
 
     .hero-content {
         z-index: 2;
-        max-width: 800px;
+        max-width: 850px;
+        padding: 50px 20px;
         animation: fadeInUp 1s ease-out;
     }
 
     .hero h1 {
         font-family: 'Playfair Display', serif;
-        font-size: 4rem;
+        font-size: 4.5rem;
         font-weight: 700;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        line-height: 1.2;
+        margin-bottom: 25px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        line-height: 1.1;
+        margin-top: 40px;
+        letter-spacing: -1px;
+        animation: fadeInUp 1.2s ease-out;
     }
 
     .hero p {
-        font-size: 1.3rem;
-        margin-bottom: 30px;
-        opacity: 0.9;
-        max-width: 600px;
+        font-size: 1.4rem;
+        margin-top: 75px;
+        opacity: 0.95;
+        max-width: 650px;
         margin-left: auto;
         margin-right: auto;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        animation: fadeInUp 1.2s ease-out 0.3s both;
+        line-height: 1.6;
     }
 
     .cta-button {
@@ -660,7 +736,25 @@
             display: none;
         }
 
+        .dropdown {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            box-shadow: none;
+            background: transparent;
+            padding: 0;
+            border: none;
+        }
+
+        .dropdown a {
+            padding: 8px 0;
+            border-bottom: none;
+            font-size: 0.9rem;
+        }
+
         .hero h1 {
+            margin-top: 40px;
             font-size: 2.5rem;
         }
 
@@ -835,10 +929,28 @@
 
     <header>
         <nav class="container">
-            <div class="logo">Tunisia</div>
+            <div class="logo">
+                <img src="icons/travel tunisia.png" alt="Tunisia Travel Logo" width="40" height="40">
+            </div>
             <ul class="nav-links">
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#experiences">Experiences</a></li>
+                <li>
+                    <a href="#destinations">Destinations</a>
+                    <ul class="dropdown">
+                        <li><a href="#destinations">Sidi Bou Said</a></li>
+                        <li><a href="#destinations">Sahara Desert</a></li>
+                        <li><a href="#destinations">Ancient Carthage</a></li>
+                        <li><a href="#destinations">Tunis Medina</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#experiences">Experiences</a>
+                    <ul class="dropdown">
+                        <li><a href="#experiences">Desert Safari</a></li>
+                        <li><a href="#experiences">Cultural Tours</a></li>
+                        <li><a href="#experiences">Beach Activities</a></li>
+                        <li><a href="#experiences">Cooking Classes</a></li>
+                    </ul>
+                </li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Plan Trip</a></li>
             </ul>
