@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://traveltunisia.netlify.app/sitemap.xml
-
-# If you prefer to block query strings or staging environments, add rules here.
