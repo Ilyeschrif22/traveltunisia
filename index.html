@@ -117,7 +117,7 @@
                     <div class="card">
                         <div class="card-thumbnail">
                             <img class="card-image" src="images/img2.jpg"
-                                alt>
+                                loading="lazy" alt>
                         </div>
                         <div class="card-content">
                             <div class="card-category">Tunis</div>
@@ -143,7 +143,7 @@
                     <div class="card">
                         <div class="card-thumbnail">
                             <img class="card-image"
-                                src="images/sahara-tunis.jpg"
+                                src="images/sahara-tunis.jpg" loading="lazy"
                                 alt>
                         </div>
                         <div class="card-content">
@@ -170,7 +170,7 @@
                     <div class="card">
                         <div class="card-thumbnail">
                             <img class="card-image" src="images/el-jem.jpg"
-                                alt>
+                                loading="lazy" alt>
                         </div>
                         <div class="card-content">
                             <div class="card-category">Tunis</div>
@@ -263,55 +263,76 @@
         </section>
 
         <section id="contact" class="contact">
-            <div class="container">
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h2>Plan Your Perfect Tunisia Adventure Today</h2>
-                        <p>Ready to explore the magic of Tunisia? Our travel
-                            experts are here to help you create
-                            unforgettable memories in this extraordinary
-                            destination. From desert expeditions to coastal
-                            retreats, we'll craft the perfect itinerary for
-                            you.</p>
-                        <p>Tunisia's strategic location at the crossroads of
-                            Africa, Europe, and the Middle East has
-                            created a unique cultural tapestry that spans
-                            millennia. The country boasts eight UNESCO World
-                            Heritage sites, including the ancient city of
-                            Carthage, the Medina of Tunis, and the
-                            Amphitheatre
-                            of El Jem, which rivals the Colosseum in Rome.</p>
-                        <p>Contact us today and let us help you discover why
-                            Tunisia is one of North Africa's most
-                            captivating destinations. Whether you're interested
-                            in archaeological wonders, beach relaxation,
-                            or authentic cultural immersion, Tunisia offers
-                            something extraordinary for every type of
-                            traveler.</p>
+
+            <div class="contact-wrapper">
+                <div class="map-container"></div>
+                <div class="form-container">
+                    <div class="contact-form">
+                        <div class="form-title">Send Us a Message</div>
+                        <div class="name-phone-wrapper">
+                            <div class="contact-name"><input
+                                    class="contact-name-input" type="text"
+                                    placeholder="Full Name"></div>
+                            <div class="contact-phone"><input
+                                    class="contact-phone-input" type="text"
+                                    placeholder="Phone"></div>
+
+                        </div>
+
+                        <div class="contact-email"><input
+                                class="contact-email-input" type="text"
+                                placeholder="Email"></div>
+
+                        <div class="contact-subject"><input
+                                class="contact-subject-input" type="text"
+                                placeholder="Subject"></div>
+
+                        <div class="contact-message"><textarea
+                                class="contact-message-input"
+                                placeholder="Message"></textarea></div>
+
+                        <div class="send-message">Send Message</div>
+
                     </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name"
-                                placeholder="Your Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email"
-                                placeholder="Your Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="destination"
-                                placeholder="Preferred Destinations">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message"
-                                placeholder="Tell us about your dream Tunisia experience..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Start
-                            Planning</button>
-                    </form>
                 </div>
             </div>
+
+            <div class="container">
+                <h3 class="contact-info-title">
+                    Plan Your Perfect Tunisia Adventure Today
+                </h3>
+
+                <p class="p1-text">
+                    Ready to explore the magic of Tunisia? Our travel
+                    experts are here to help you create
+                    unforgettable memories in this extraordinary
+                    destination.<br>
+                    From desert expeditions to coastal retreats, we'll craft
+                    the perfect itinerary for you.
+                </p>
+
+                <p class="p2-text">
+                    Tunisia's strategic location at the crossroads of
+                    Africa, Europe, and the Middle East has
+                    created a unique cultural tapestry that spans millennia.
+                    The country boasts eight UNESCO
+                    World Heritage sites, including the ancient city of
+                    Carthage, the Medina of Tunis, and the
+                    Amphitheatre of El Jem, which rivals the Colosseum in
+                    Rome.
+                </p>
+
+                <p class="p3-text">
+                    Contact us today and let us help you discover why
+                    Tunisia is one of North Africa's most
+                    captivating destinations. Whether you're interested in
+                    archaeological wonders, beach
+                    relaxation, or authentic cultural immersion, Tunisia
+                    offers something extraordinary for
+                    every type of traveler.
+                </p>
+            </div>
+
         </section>
 
         <footer>
@@ -319,13 +340,15 @@
                 <div class="footer-content">
                     <div class="footer-section">
                         <h3>Discover Tunisia</h3>
-                        <p>Your gateway to experiencing the authentic beauty,
+                        <p>Your gateway to experiencing the authentic
+                            beauty,
                             culture, and adventure that Tunisia offers to
                             travelers from around the world. With over 1,300
                             kilometers of coastline, diverse landscapes
                             from mountains to desert, and a rich cultural
                             heritage spanning Phoenician, Roman, Arab, and
-                            French influences, Tunisia is truly a destination
+                            French influences, Tunisia is truly a
+                            destination
                             like no other.</p>
                     </div>
                     <div class="footer-section">
@@ -341,13 +364,16 @@
                                 href="https://www.tunisia-tourism.org/en/sahara-desert-tours"
                                 target="_blank"
                                 rel="noopener">Sahara Desert Tours</a></p>
-                        <p><a href="https://whc.unesco.org/en/statesparties/tn"
+                        <p><a
+                                href="https://whc.unesco.org/en/statesparties/tn"
                                 target="_blank" rel="noopener">Cultural
                                 Heritage Sites</a></p>
-                        <p><a href="https://www.tunisia-tourism.org/en/beaches"
+                        <p><a
+                                href="https://www.tunisia-tourism.org/en/beaches"
                                 target="_blank" rel="noopener">Mediterranean
                                 Beaches</a></p>
-                        <p><a href="https://www.tunisia-tourism.org/en/cuisine"
+                        <p><a
+                                href="https://www.tunisia-tourism.org/en/cuisine"
                                 target="_blank" rel="noopener">Traditional
                                 Cuisine</a></p>
                     </div>
@@ -371,6 +397,23 @@
         </footer>
 
         <script src="./script.js"></script>
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Travel Tunisia",
+  "url": "https://traveltunisia.netlify.app/",
+  "logo": "https://traveltunisia.netlify.app/icons/logo.png",
+  "description": "Explore Tunisia's Sahara dunes, Mediterranean beaches, ancient Carthage, vibrant souks and rich Berber culture — an essential travel guide for 2025.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tunis",
+    "addressCountry": "TN"
+  },
+  "image": "https://traveltunisia.netlify.app/images/tunisia.png"
+}
+</script>
+
     </body>
 
 </html>

@@ -178,35 +178,37 @@
         background-position: center;
         background-repeat: no-repeat;
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6em 0 0 2em;
     }
 
     .hero-title {
-        margin: 2em 2em 2em 1em;
         font-weight: 500;
         font-size: 54px;
-        z-index: 1;
         color: white;
+        margin: 0 0 1em 0;
     }
 
     .hero-content {
         color: white;
-        text-align: center;
+        text-align: left;
     }
 
     .explore-section {
-        height: 300px;
-        height: 50%;
-        width: 55%;
-        position: absolute;
-        margin-top: 22em;
-        padding: 20px 30px 0 50px;
+        width: 100%;
+        max-width: 700px;
+        padding: 20px 0 0 0;
         font-size: 16px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         color: var(--white);
-        z-index: 1;
+        text-align: left;
+        margin-top: 6em;
     }
+
+
 
     .explore-paragraph {
         font-size: 17px;
@@ -326,7 +328,7 @@
 
     /* Experiences Section */
     .experiences {
-        height: 120vh;
+        height: 100%;
         width: 100%;
         padding: 0 50px;
     }
@@ -463,90 +465,132 @@
     }
 
     .contact {
+        position: relative;
+        width: 100%;
+        height: 100%;
         padding: 100px 0;
-        background: black;
-        color: white;
-        position: relative;
+        background-color: #fff;
+        color: #000;
     }
 
-    .contact-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: start;
-        position: relative;
-        z-index: 2;
+    .contact-info-title {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #000;
+        margin-bottom: 40px;
     }
 
-    .contact-info h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.5rem;
-        margin-bottom: 30px;
+    .p1-text,
+    .p2-text,
+    .p3-text {
+        margin-top: 20px;
+        min-width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+        text-align: justify;
+        max-width: 700px;
+        color: #333;
     }
 
-    .contact-info p {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-        opacity: 0.9;
+    .contact-wrapper {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        margin-bottom: 2em;
+    }
+
+    .map-container {
+        height: 100%;
+        width: 50%;
+    }
+
+    .form-container {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .contact-form {
-        background: rgba(255, 255, 255, 0.15);
-        padding: 40px;
-        border-radius: var(--border-radius);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: var(--shadow-soft);
+        width: 650px;
+        height: 680px;
+        background-color: #16422d;
+        padding: 32px 32px 0 32px;
     }
 
-    .form-group {
-        margin-bottom: 25px;
+    .form-title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--white)
     }
 
-    .form-group input,
-    .form-group textarea {
+    .name-phone-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .contact-name,
+    .contact-phone {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        width: 300px;
+        height: 60px;
+        background-color: var(--white);
+
+    }
+
+    input,
+    textarea {
         width: 100%;
-        padding: 15px;
+        height: 80%;
         border: none;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.9);
-        font-family: inherit;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
         outline: none;
-        background: white;
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-soft);
+        font-size: 16px;
+        color: var(--gray);
+        font-family: 'Inter', sans-serif;
     }
 
-    .form-group textarea {
-        height: 120px;
-        resize: vertical;
+    .contact-email,
+    .contact-subject {
+        width: 100%;
+        height: 60px;
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        margin-top: 30px;
     }
 
-    .submit-btn {
-        background: var(--gradient-desert);
-        color: white;
-        border: none;
-        padding: 15px 40px;
-        border-radius: 50px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+    .contact-message {
+        width: 100%;
+        height: 180px;
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        margin-top: 30px;
     }
 
-    .submit-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
+    .send-message {
+        margin-top: 20px;
+        height: 50px;
+        width: 180px;
+        background-color: var(--main-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
     }
 
-    /* Footer */
     footer {
         background: var(--text-dark);
         color: var(--text-light);
@@ -614,7 +658,7 @@
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 23px;
         }
 
         .header__menu-toggle {
@@ -644,9 +688,34 @@
         .card-container {
             grid-template-columns: repeat(2, 1fr);
         }
+
+
     }
 
     @media (max-width: 740px) {
+
+        .logo {
+            font-size: 22px;
+            width: 240px;
+        }
+
+        .hero {
+            padding: 2em 2em 0 2em;
+        }
+
+        .hero-title {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .explore-section {
+            margin-top: 0;
+        }
+
+        .explore-button {
+            margin-top: 10px;
+        }
 
         .card-container {
             grid-template-columns: 1fr;
@@ -654,24 +723,92 @@
 
         .experiences {
             height: 100%;
-            padding: 0 40px;
+            padding: 0 28px;
         }
 
-
         .experience-title {
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 500;
             line-height: 1.3;
             width: 240px;
         }
 
-
         .experience-number {
-            font-size: 28px;
+            font-size: 20px;
+        }
+
+        .experience-image {
+            display: none;
         }
 
         .arrow_outward img {
-            height: 30px;
-            width: 30px;
+            height: 20px;
+            width: 20px;
         }
+
+        .experience-link-block {
+            gap: 0;
+        }
+
+        .experience-link-block:hover {
+            background-color: inherit !important;
+            padding: 32px 0 !important;
+        }
+
+        .experience-link-block:hover .arrow_outward {
+            transform: none !important;
+            transition: none !important;
+        }
+
+        .contact-info-title {
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 25px;
+        }
+
+        .p1-text,
+        .p2-text,
+        .p3-text {
+            font-size: 15px;
+            line-height: 1.7;
+            padding: 0 10px;
+        }
+
+        .contact {
+            padding: 50px 0;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .contact-form {
+            padding: 20px;
+            width: 100%;
+            height: 650px;
+            margin-left: 20px;
+        }
+
+        .form-title {
+            font-size: 30px;
+        }
+
+        input {}
+
+        .contact-name,
+        .contact-phone,
+        .contact-email,
+        .contact-subject,
+        .contact-message {
+            font-size: 14px;
+            padding: 10px 10px;
+        }
+
+        .send-message {
+            margin: 20px auto;
+        }
+
+
+
     }
